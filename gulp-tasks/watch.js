@@ -3,6 +3,8 @@ const runSequence = require('run-sequence');
 module.exports = {
   dep: [],
   fn: function (gulp, done) {
-    return gulp.watch('src/**/*.js', () => runSequence('js:build'));
+    gulp.watch('src/**/*.js', ['js:build']);
+    gulp.watch('scss/**/*.scss', ['css:build']);
+    done();
   }
 };

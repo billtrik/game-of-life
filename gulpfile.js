@@ -7,6 +7,7 @@ gulp.task('default', (done) => {
   runSequence(
     'clean',
     'js:build',
+    'css:build',
     ['server', 'watch'],
     done
   );
