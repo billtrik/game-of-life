@@ -1,5 +1,3 @@
-const runSequence = require('run-sequence');
-
 module.exports = {
   dep: [],
   fn: function (gulp, done) {
