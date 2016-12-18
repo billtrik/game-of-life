@@ -15,7 +15,7 @@ module.exports = {
     };
 
     return gulp
-      .src('./scss/styles.scss')
+      .src('./src/scss/styles.scss')
       .pipe(sourcemaps.init())
       .pipe(sass(sassOptions).on('error', sass.logError))
       .pipe(autoprefixer(autoprefixerOptions))

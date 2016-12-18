@@ -17,7 +17,7 @@ module.exports = {
         debug: true
       });
 
-      const b = browserify('./src/index.js', browserifyOptions).transform(babel)
+      const b = browserify('./src/js/index.js', browserifyOptions).transform(babel)
 
       browserifyInc(b, {cacheFile: './browserify-cache.json'});
 
