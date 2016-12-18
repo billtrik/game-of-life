@@ -1,4 +1,3 @@
-// const connect = require('gulp-connect');
 const webserver = require('gulp-webserver');
 
 module.exports = {
@@ -14,10 +13,5 @@ module.exports = {
     return gulp
       .src( './public/' )
       .pipe(webserver(serverOptions));
-
-    // connect.server({
-    //   root: './public',
-    //   livereload: true
-    // });
   }
 };
