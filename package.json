@@ -1,0 +1,41 @@
+{
+  "name": "game-of-life-billtrik",
+  "version": "0.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bill Trikalinos",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/smallpdf/gameoflife-billtrik.git"
+  },
+  "bugs": {
+    "url": "https://github.com/smallpdf/gameoflife-billtrik/issues"
+  },
+  "homepage": "https://github.com/smallpdf/gameoflife-billtrik#readme",
+  "description": "",
+  "dependencies": {
+    "babel-cli": "~6.18.0",
+    "babel-polyfill": "~6.20.0",
+    "babel-preset-latest": "~6.16.0",
+    "babel-preset-react": "~6.16.0",
+    "babelify": "~7.3.0",
+    "browserify": "~13.1.1",
+    "browserify-incremental": "~3.1.1",
+    "gulp": "~3.9.1",
+    "gulp-cli": "~1.2.2",
+    "gulp-connect": "~5.0.0",
+    "gulp-require-tasks": "~1.0.5",
+    "gulp-rm": "~1.0.2",
+    "gulp-sourcemaps": "~1.9.1",
+    "gulp-webserver": "~0.9.1",
+    "react": "~15.4.1",
+    "react-dom": "~15.4.1",
+    "run-sequence": "~1.2.2",
+    "vinyl-buffer": "~1.0.0",
+    "vinyl-source-stream": "~1.1.0",
+    "watchify": "~3.8.0"
+  }
+}
