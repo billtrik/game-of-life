@@ -3,5 +3,6 @@
 import 'babel-polyfill';
 import React from 'react';
 import { render } from 'react-dom';
+import App from './app';
 
-render(<p>THIS ISasds ONLY A TEST as</p>, document.getElementById('app-container'));
+render(<App />, document.getElementById('app-container'));
