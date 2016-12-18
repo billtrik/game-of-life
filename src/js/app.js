@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 
 import createStore from './store';
-import Table from './table/container';
+import Layout from './layout/component';
 
 export default React.createClass({
   componentWillMount() {
@@ -15,7 +15,7 @@ export default React.createClass({
   render() {
     return (
       <Provider store={this.store}>
-        <Table />
+        <Layout />
       </Provider>
     );
   }
