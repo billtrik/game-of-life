@@ -9,6 +9,7 @@ function getRowCount(list, row, col, width) {
 }
 
 function shouldLive(data, row, col, width, height) {
+  const currentValue = data.getIn([row, col]);
   let total = 0;
 
   // Get count for previous line
@@ -16,12 +17,22 @@ function shouldLive(data, row, col, width, height) {
     total = total + getRowCount(data.get(row - 1), row, col, width);
   }
 
-  // Get count for current line
-  total = total + getRowCount(data.get(row), row, col, width);
+  // Get count for current line excluding currentValue
+  if (col !== 0 && data.getIn([row, col - 1])) {
+    total = total + 1;
+  }
+
+  if (col !== width - 1 && data.getIn([row, col + 1])) {
+    total = total + 1;
+  }
 
   // Get count for next line
   if (row !== height - 1) {
     total = total + getRowCount(data.get(row + 1), row, col, width);
+  }
+
+  if (currentValue === false) {
+    return total === 3;
   }
 
   return total === 2 || total === 3;
