@@ -30,7 +30,7 @@ function shouldLive(data, row, col, width, height) {
 function calculateNextState(data, width, height) {
   const result = [];
 
-  for (let i=0; i < width; i++) {
+  for (let i=0; i < height; i++) {
     result[i] = [];
 
     for (let j=0; j < width; j++) {
