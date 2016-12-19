@@ -12,7 +12,7 @@ function getRandomBoolean () {
 export function generateDummyData(width, height) {
   const result = [];
 
-  for (let i=0; i < width; i++) {
+  for (let i=0; i < height; i++) {
     result[i] = [];
 
     for (let j=0; j < width; j++) {
