@@ -2,7 +2,7 @@ import React from 'react';
 
 export default React.createClass({
   shouldComponentUpdate(nextProps, nextState) {
-    return this.props.data === nextProps.data;
+    return this.props.data !== nextProps.data;
   },
 
   render() {
