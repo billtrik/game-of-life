@@ -1,3 +1,13 @@
 td{
-  color: white;
+  color: transparent;
+
+  transition: background-color .2s;
+
+  &.alive{
+    background-color: black !important,
+  }
+
+  &.dead{
+    background-color: grey !important,
+  }
 }
