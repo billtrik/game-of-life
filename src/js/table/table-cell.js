@@ -9,12 +9,20 @@ const style = {
   }
 };
 
-export default (props) => {
-  return (
-    <td style={props.data ? style.enabled : style.disabled}>
-      {
-        `${props.rowId}:${props.colId}`
-      }
-    </td>
-  );
-}
+export default React.createClass({
+  shouldComponentUpdate(nextProps, nextState) {
+    return this.props.data === nextProps.data;
+  },
+
+  render() {
+    const { data, rowId, colId } = this.props;
+
+    return (
+      <td style={data ? style.enabled : style.disabled}>
+        {
+          `${rowId}:${colId}`
+        }
+      </td>
+    );
+  }
+});
