@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import { fromJS } from 'immutable';
-import { NEXT_STEP } from './actions';
+import { RESET, NEXT_STEP } from './actions';
+import { generateDummyData } from './initial-state';
 
 function getRowCount(list, row, col, width) {
   const slice = list.slice(Math.max(0, col - 1), Math.min(width, col + 2));
@@ -56,6 +57,8 @@ export default (state = fromJS({}), action) => {
   switch(action.type) {
     case NEXT_STEP:
       return state.set('data', calculateNextState(state.get('data'), state.get('width'), state.get('height')));
+    case RESET:
+      return state.set('data', fromJS(generateDummyData(state.get('width'), state.get('height')))) ;
     default:
       return state;
   }

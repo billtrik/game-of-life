@@ -1,6 +1,7 @@
 import React from 'react';
 import Table from '../table/container';
 import NextStepButton from './next-step/container';
+import ResetButton from './reset/container';
 
 export default () => (
   <section className='container'>
@@ -9,5 +10,6 @@ export default () => (
     </header>
     <Table />
     <NextStepButton />
+    <ResetButton />
   </section>
 );
