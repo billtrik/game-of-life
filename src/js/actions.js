@@ -14,3 +14,31 @@ export function reset() {
     type: RESET
   };
 }
+
+
+export const TOGGLE_AUTOPLAY = 'TOGGLE_AUTOPLAY';
+
+function toggleAutoplay() {
+  return {
+    type: TOGGLE_AUTOPLAY
+  };
+}
+
+export function handleAutoplayToggling() {
+  return (dispatch, getState) => {
+    dispatch(toggleAutoplay());
+
+    function triggerNextStep() {
+      setTimeout(() => {
+        const state = getState();
+
+        if (state.get('autoplay')) {
+          dispatch(nextStep());
+          triggerNextStep();
+        }
+      }, 1000);
+    }
+
+    triggerNextStep();
+  };
+}

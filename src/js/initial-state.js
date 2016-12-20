@@ -26,5 +26,6 @@ export function generateDummyData(width, height) {
 export default () => fromJS({
   width: WIDTH,
   height: HEIGHT,
+  autoplay: false,
   data: generateDummyData(WIDTH, HEIGHT)
 });

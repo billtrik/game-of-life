@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import { fromJS } from 'immutable';
-import { RESET, NEXT_STEP } from './actions';
+import { RESET, NEXT_STEP, TOGGLE_AUTOPLAY } from './actions';
 import { generateDummyData } from './initial-state';
 
 function getRowCount(list, row, col, width) {
@@ -55,6 +55,8 @@ function calculateNextState(data, width, height) {
 
 export default (state = fromJS({}), action) => {
   switch(action.type) {
+    case TOGGLE_AUTOPLAY:
+      return state.set('autoplay', !state.get('autoplay'));
     case NEXT_STEP:
       return state.set('data', calculateNextState(state.get('data'), state.get('width'), state.get('height')));
     case RESET:
